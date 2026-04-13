@@ -72,3 +72,8 @@ Check out the chart's documentation for configuration options.
 
 > **Personal fork:** I'm using this with Azure Key Vault for secret management in my home lab cluster.
 > The upstream project also supports AWS KMS and GCP KMS if you're not on Azure.
+
+## Troubleshooting
+
+- If the operator pod can't decrypt secrets, make sure the pod's managed identity has `get` and `unwrapKey` permissions on the Azure Key Vault key.
+- Check operator logs with `kubectl logs -n sops-operator deploy/sops-operator` for decryption errors.
