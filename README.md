@@ -67,3 +67,8 @@ helm install craftypath/sops-operator
 ```
 
 Check out the chart's documentation for configuration options.
+
+## Notes
+
+> **Personal fork:** I'm using this with Azure Key Vault for secret management in my home lab cluster.
+> The upstream project also supports AWS KMS and GCP KMS if you're not on Azure.
