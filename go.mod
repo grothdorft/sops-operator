@@ -1,4 +1,4 @@
-module github.com/craftypath/sops-operator
+module github.com/myfork/sops-operator
 
 go 1.21
 
