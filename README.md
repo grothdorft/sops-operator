@@ -77,4 +77,4 @@ Check out the chart's documentation for configuration options.
 
 - If the operator pod can't decrypt secrets, make sure the pod's managed identity has `get` and `unwrapKey` permissions on the Azure Key Vault key.
 - Check operator logs with `kubectl logs -n sops-operator deploy/sops-operator` for decryption errors.
-- If you see `SecretReconcileFailed` events on a `SopsSecret`, describe the resource with `kubectl describe sopssecret <name>` for a more detailed error message.
+- If secrets aren't reconciling after an update, restarting the operator pod usually forces a re-sync: `kubectl rollout restart -n sops-operator deploy/sops-operator`.
