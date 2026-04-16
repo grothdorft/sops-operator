@@ -67,3 +67,5 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 	sigs.k8s.io/yaml v1.4.0 // indirect
 )
+
+// TODO: upgrade to sops v3.9.x once we've tested age key provider integration
