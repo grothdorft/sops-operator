@@ -69,3 +69,4 @@ require (
 )
 
 // TODO: upgrade to sops v3.9.x once we've tested age key provider integration
+// NOTE: using this fork primarily for learning purposes; tracking upstream craftypath/sops-operator
