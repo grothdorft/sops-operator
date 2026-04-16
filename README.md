@@ -77,5 +77,4 @@ Check out the chart's documentation for configuration options.
 
 - If the operator pod can't decrypt secrets, make sure the pod's managed identity has `get` and `unwrapKey` permissions on the Azure Key Vault key.
 - Check operator logs with `kubectl logs -n sops-operator deploy/sops-operator` for decryption errors.
-- If you see `SecretNotFound` errors, verify the `SopsSecret` resource was applied to the correct namespace.
-- After rotating the Azure Key Vault key, re-encrypt all `SopsSecret` values and redeploy them — the operator does not handle key rotation automatically.
+- If you see `SecretReconcileFailed` events on a `SopsSecret`, describe the resource with `kubectl describe sopssecret <name>` for a more detailed error message.
